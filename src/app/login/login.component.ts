@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
-
-import {products} from '../products';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-login',
@@ -13,11 +12,12 @@ export class LoginComponent {
     password: string = '';
     errorLogin: boolean = false
 
+    constructor(private router: Router) {
+    }
 
     login() {
         if (this.email !== '' && this.password !== '') {
-            console.log('RES', this.email, this.password)
-            // navigate
+            this.router.navigate(['employee-list']);
         } else {
             this.errorLogin = true
         }
