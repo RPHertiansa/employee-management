@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <!--    TODO: styling-->
+    <form>
+        <div class="form-group">
+            <label>Email address?</label>
+            <input
+                type="email"
+                class="form-control"
+                placeholder="Enter email"
+                [(ngModel)]="email"
+                name="email">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password"
+                   class="form-control"
+                   placeholder="Password"
+                   [(ngModel)]="password"
+                   name="password">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
+        <p class="text-danger" *ngIf="errorLogin">
+            Login failed! Please check email and password!
+        </p>
+    </form>
+</div>
