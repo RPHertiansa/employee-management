@@ -7,7 +7,6 @@ import {Router} from '@angular/router';
     styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-    products = products;
     email: string = '';
     password: string = '';
     errorLogin: boolean = false

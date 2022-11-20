@@ -7,21 +7,24 @@ import {AppComponent} from './app.component';
 import {TopBarComponent} from './top-bar/top-bar.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {LoginComponent} from "./login/login.component";
+import {EmployeeListComponent} from './employeeList/employee-list.component'
 
 @NgModule({
     imports: [
+        NgbModule,
         BrowserModule,
         ReactiveFormsModule,
         RouterModule.forRoot([
             {path: '', component: LoginComponent},
+            {path: 'employee-list', component: EmployeeListComponent},
         ]),
-        NgbModule,
         FormsModule
     ],
     declarations: [
         AppComponent,
         TopBarComponent,
-        LoginComponent
+        LoginComponent,
+        EmployeeListComponent
     ],
     bootstrap: [
         AppComponent
